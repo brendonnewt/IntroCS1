@@ -2,7 +2,7 @@
   Author: Brendon Newton
   Assignment Title: Program 17
   Assignment Description: This program defines functions
-  						  for array processing
+                for array processing
   Due Date: 11/04/2022
   Date Created: 12/25/2022
   Date Last Modified: 12/25/2022
@@ -12,6 +12,10 @@
 
 #include <string>
 #include <vector>
+#include <cmath>
+
+const int MAX_SIZE = 25;
+
 /*
  Description: Takes in an int array, array size,
               and int v and returns the amount 
@@ -88,5 +92,52 @@ int arrayCount(std::vector<std::string> a, std::string v);
 */
 
 int arrayCount(std::vector<double> a, double v);
+
+/*
+ Description: Takes in a char vector and 
+              char v and returns the amount
+              of times v occurs in the vector
+ Return: Frequency int of v in char vector
+ Precondition: a and v are valid
+ Postcondition: All values are unchanged
+*/
+
+int arrayCount(std::vector<char> a, char v);
+
+/*
+ Description: Takes in an int matrix, int rows,
+              int columns, and int v and returns 
+              the amount of times v occurs in
+              the matrix
+ Return: Frequency int of v in int matrix
+ Precondition: a[][], r, c, and v are valid
+ Postcondition: All values are unchanged
+*/
+
+int matrixCount(int m[ ][MAX_SIZE], int r, int c, int v);
+
+/*
+ Description: Takes in a char matrix, int rows,
+              int columns, and char v and returns 
+              the amount of times v occurs in
+              the char matrix
+ Return: Frequency int of v in char matrix
+ Precondition: a[][], r, c, and v are valid
+ Postcondition: All values are unchanged
+*/
+
+int matrixCount(char m[ ][MAX_SIZE], int r, int c, char v);
+
+/*
+ Description: Takes in a string matrix, int rows,
+              int columns, and string v and returns 
+              the amount of times v occurs in
+              the string matrix
+ Return: Frequency int of v in string matrix
+ Precondition: a[][], r, c, and v are valid
+ Postcondition: All values are unchanged
+*/
+
+int matrixCount(std::string m[ ][MAX_SIZE], int r, int c, std::string v);
 
 #endif
