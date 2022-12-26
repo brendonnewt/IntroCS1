@@ -1,0 +1,59 @@
+file 1:
+
+Please Enter The Name Of The Data File: BadFileName
+Error: File failed to open.
+Please Enter The Name Of The Data File: prog13a.txt
+
+Final Location: (195.0, 215.0)
+Total distance traveled 587.6
+Distance to starting point 290.3
+Average distance to start point = 83.4
+
+file 2:
+
+Please Enter The Name Of The Data File: prog13b.txt
+
+Final Location: (-60.0, -78.0)
+Total distance traveled 3415.6
+Distance to starting point 150.8
+Average distance to start point = 115.3
+
+file 3:
+
+Please Enter The Name Of The Data File: BadFileName
+Error: File failed to open.
+Please Enter The Name Of The Data File: BadCommand
+Error: File failed to open.
+Please Enter The Name Of The Data File: prog13c.txt
+
+Final Location: (-72.0, 54.0)
+Total distance traveled 2201.1
+Distance to starting point 93.0
+Average distance to start point = 81.5
+
+file 4:
+
+Please Enter The Name Of The Data File: prog13d.txt
+
+Final Location: (-59.7, -78.0)
+Total distance traveled 3413.3
+Distance to starting point 150.6
+Average distance to start point = 115.5
+
+file 5:
+
+Please Enter The Name Of The Data File: prog13e.txt
+
+Final Location: (288.0, 307.0)
+Total distance traveled 713.4
+Distance to starting point 713.4
+Average distance to start point = 713.4
+
+file 6:
+
+Please Enter The Name Of The Data File: prog13f.txt
+
+Final Location: (185.0, 200.0)
+Total distance traveled 17837.9
+Distance to starting point 374.0
+Average distance to start point = 570.9
