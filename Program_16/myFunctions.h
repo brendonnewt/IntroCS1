@@ -12,185 +12,150 @@
 #define MYFUNCTIONS_H
 
 /*
-  Precondition: Two integer values exist
-
-  Postcondition: The value of the largest integer is returned.
-                 The original integers are unchanged
-                 If the integers have the same value then 
-                 the value of either integer is returned.
-
-  Return: Integer
-
-  Description: Function returns the value of the larger of 
-               two integers.
+ Description: Function returns the value of the larger of 
+              two integers.
+ Return: Integer
+ Precondition: Two integer values exist
+ Postcondition: The value of the largest integer is returned.
+                The original integers are unchanged
+                If the integers have the same value then 
+                the value of either integer is returned.
 */
 
 int max(int n1, int n2);
 
 /*
-  Precondition: Two double values exist
-
-  Postcondition: The value of the largest double is returned.
-                 The original doubles are unchanged
-                 If the doubles have the same value then 
-                 the value of either double is returned.
-
-  Return: Double
-
-  Description: Function returns the value of the larger of 
-               two doubles.
+ Description: Function returns the value of the larger of 
+              two doubles.
+ Return: Double
+ Precondition: Two double values exist
+ Postcondition: The value of the largest double is returned.
+                The original doubles are unchanged
+                If the doubles have the same value then 
+                the value of either double is returned.
 */
 
 double max(double n1, double n2);
 
 /*
-  Precondition: An array of integer values exists
-
-  Postcondition: The largest value in the array is returned.
-                 The original array is unchanged
-
-  Return: Integer
-
-  Description: Function returns the value of the largest
-               integer in an array.
+ Description: Function returns the value of the largest
+              integer in an array.
+ Return: Integer
+ Precondition: An array of integer values exists
+ Postcondition: The largest value in the array is returned.
+                The original array is unchanged
 */
 
 int max(int m[], int n);
 
 /*
-  Precondition: An array of double values exists
-
-  Postcondition: The largest value in the array is returned.
-                 The original array is unchanged
-
-  Return: Double
-
-  Description: Function returns the value of the largest
-               double in an array.
+ Description: Function returns the value of the largest
+              double in an array.
+ Return: Double
+ Precondition: An array of double values exists
+ Postcondition: The largest value in the array is returned.
+                The original array is unchanged
 */
 
 double max(double m[], int n);
 
 /*
-  Precondition: Two integer values exist
-
-  Postcondition: The value of the smallest integer is returned.
-                 The original integers are unchanged
-                 If the integers have the same value then 
-                 the value of either integer is returned.
-
-  Return: Integer
-
-  Description: Function returns the value of the smaller of 
-               two integers.
+ Description: Function returns the value of the smaller of 
+              two integers.
+ Return: Integer
+ Precondition: Two integer values exist
+ Postcondition: The value of the smallest integer is returned.
+                The original integers are unchanged
+                If the integers have the same value then 
+                the value of either integer is returned.
 */
 
 int min(int n1, int n2);
 
 /*
-  Precondition: Two double values exist
-
-  Postcondition: The value of the smallest double is returned.
-                 The original doubles are unchanged
-                 If the doubles have the same value then 
-                 the value of either double is returned.
-
-  Return: Double
-
-  Description: Function returns the value of the smaller of 
-               two doubles.
+ Description: Function returns the value of the smaller of 
+              two doubles.
+ Return: Double
+ Precondition: Two double values exist
+ Postcondition: The value of the smaller double is returned.
+                The original doubles are unchanged
+                If the doubles have the same value then 
+                the value of either double is returned.
 */
 
 double min(double n1, double n2);
 
 /*
-  Precondition: An array of integer values exists
-
-  Postcondition: The smallest value in the array is returned.
-                 The original array is unchanged
-
-  Return: Integer
-
-  Description: Function returns the value of the smallest
-               integer in an array.
+ Description: Function returns the value of the smallest
+              integer in an array.
+ Return: Integer
+ Precondition: An array of integer values exists
+ Postcondition: The smallest value in the array is returned.
+                The original array is unchanged
 */
 
 int min(int m[], int n);
 
 /*
-  Precondition: An array of double values exists
-
-  Postcondition: The smallest value in the array is returned.
-                 The original array is unchanged
-
-  Return: Double
-
-  Description: Function returns the value of the smallest
-               double in an array.
+ Description: Function returns the value of the smallest
+              double in an array.
+ Return: Double
+ Precondition: An array of double values exists
+ Postcondition: The smallest value in the array is returned.
+                The original array is unchanged
 */
 
 double min(double m[], int n);
 
 /*
-  Precondition: Some integer value exists
-
-  Postcondition: Integer value is unchanged
-
-  Return: Integer
-
-  Description: This function returns the absolute value of an integer.
+ Description: This function returns the absolute value 
+              of an integer.
+ Return: Integer
+ Precondition: Some integer value exists
+ Postcondition: Integer value is unchanged
 */
 
 int absoluteValue(int n);
 
 /*
-  Precondition: Some double value exists
-
-  Postcondition: Double value is unchanged
-
-  Return: Double
-
-  Description: This function returns the absolute value of a double.
+ Description: This function returns the absolute value 
+              of a double.
+ Return: Double
+ Precondition: Some double value exists
+ Postcondition: Double value is unchanged
 */
+
 
 double absoluteValue(double n);
 
 /*
-  Precondition: Some integer value N exists
-
-  Postcondition: The value of the N unchanged
-
-  Return: Double
-
-  Description: The function calculates factorial.
+ Description: The function calculates factorial.
+ Return: Double
+ Precondition: Some integer value N exists
+ Postcondition: The value of the N unchanged
+                The factorial of N is returned
 */
 
 double factorial(int n);
 
 /*
-  Precondition: Two integer value M and N exists
-
-  Postcondition: The value of the M and N unchanged
-
-  Return: The number of combinations of M items taken N at a time.
-          Double
-
-  Description: The function calculates the number of combinations of 
-               M items taken N at a time.
+ Description: The function calculates the number of
+              combinations of M items taken N at a time.
+ Return: The number of combinations of M items taken N
+         at a time.
+ Precondition: Two integer values M and N exists
+ Postcondition: The value of the M and N unchanged
 */
 
 double combination(int n1, int n2);
 
 /*
-  Precondition: Two integer value M and N exists
-
-  Postcondition: The value of the M and N unchanged
-
-  Return: The number of permutations of M items taken N at a time.
-          Double
-
-  Description: The function calculates the number of permutations of
-               M items taken N at a time.
+ Description: The function calculates the number of
+              perumtations of M items taken N at a time.
+ Return: The number of permutations of M items taken N
+         at a time.
+ Precondition: Two integer values M and N exists
+ Postcondition: The value of the M and N unchanged
 */
 
 double permutation(int n1, int n2);
