@@ -9,7 +9,7 @@
                           and ending distance to start
   Due Date: 10/07/2022
   Date Created: 12/19/2022
-  Date Last Modified: 12/20/2022
+  Date Last Modified: 12/29/2022
 */
 
 /*
@@ -32,8 +32,6 @@
 
   Assumptions: It is assumed the user will input a valid file name
                It is assumed the information in each line is valid
-               It is assumed each file starts with START and ends
-               with STOP
 */
 
 #include <iostream>
@@ -41,7 +39,6 @@
 #include <string>
 #include <cmath>
 #include <iomanip>
-#include <vector>
 
 using namespace std;
 
@@ -56,9 +53,7 @@ int main() {
            totalDist, avgDist, distToStart,
            x1, y1, pointDist, x2, y2,
            avgSumDist, pointToStart;
-    vector<int> xDataPoints;
-    vector<int> yDataPoints;
-    int dataPoints = 0;
+    int dataPoints;
 
     //Input
 
@@ -82,58 +77,55 @@ int main() {
 
     //Process
 
-    //Gobbles empty header
+    //Gobbles header
     for (int i = 0; i < 2; i++) {
-
         getline(inFS, gobbleString);
-
     }
 
     totalDist = 0;
     avgSumDist = 0;
+    dataPoints = 0;
 
-    while (inFS >> command) {
-        
+    //Keeps reading until start is reached
+    do {
+
+        inFS >> command;
         inFS >> x1 >> y1;
+        
+    } while (command != "START");
 
-        //Sets points when start is read
-        if (command == "START") {
-            startX = x1;
-            startY = y1;
-        }
+    startX = x1;
+    startY = y1;
+
+    do {    
+        
+        inFS >> command;
+        inFS >> x2 >> y2;
 
         //Sets points when stop is read
         if (command == "STOP") {
-            endX = x1;
-            endY = y1;
+            endX = x2;
+            endY = y2;
         }
         
         //Process when Data is read
         if (command == "DATA") {
-            xDataPoints.push_back(x1);
-            yDataPoints.push_back(y1);
         }
 
-    }
-
-    size_t i = 0;
-
-    for (i = 0; i < xDataPoints.size(); i++) {
         //Calcs points distance from start and adds to avg
-        pointToStart = sqrt(pow(xDataPoints[i] - startX, 2)
-        + pow(yDataPoints[i] - startY, 2));
+        pointToStart = sqrt(pow(x2 - startX, 2) + pow(y2 - startY, 2));
         avgSumDist += pointToStart;
 
-        if (i < xDataPoints.size() - 1) {
-            pointDist = sqrt(pow(xDataPoints[i] - xDataPoints[i + 1], 2)
-            + pow(yDataPoints[i] - yDataPoints[i + 1], 2));
-            totalDist += pointDist;
-        }
-    }
+        //Calcs point distance from each other
+        pointDist = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+        totalDist += pointDist;
 
-    cout << "avgSumDist = " << avgSumDist << endl;
+        dataPoints++;
+        x1 = x2;
+        y1 = y2;
 
-    dataPoints = xDataPoints.size() + 1;
+    } while (command != "STOP");
+
     distToStart = sqrt(pow(endX - startX, 2) + pow(endY - startY, 2));
     avgDist = (avgSumDist / dataPoints);
 
@@ -145,8 +137,6 @@ int main() {
     cout << "Total distance traveled " << totalDist << endl;
     cout << "Distance to starting point " << distToStart << endl;
     cout << "Average distance to start point = " << avgDist << endl;
-
-
 
     inFS.close();
 
